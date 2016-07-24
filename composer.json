@@ -1,0 +1,31 @@
+{
+    "name": "hinet/laravel-umeditor",
+    "description": "Umeditor for laravel",
+    "authors": [
+        {
+            "name": "zhuzhichao",
+            "email": "me@zhuzhichao.com"
+        },
+        {
+            "name": "hinet",
+            "email": "63603636@qq.com"
+        }
+    ],
+    "require": {
+        "php": ">=5.4.0",
+        "illuminate/support": "5.2.*"
+    },
+    "autoload": {
+        "classmap": [
+            "src/controllers"
+        ],
+        "psr-4": {
+            "hinet\\Umeditor\\": "src/"
+        }
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "2.0-dev"
+        }
+    }
+}
