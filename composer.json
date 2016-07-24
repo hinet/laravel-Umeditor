@@ -1,6 +1,6 @@
 {
     "name": "hinet/laravel-umeditor",
-    "description": "Umeditor for laravel",
+    "description": "umeditor for laravel",
     "authors": [
         {
             "name": "zhuzhichao",
@@ -25,7 +25,7 @@
     },
     "extra": {
         "branch-alias": {
-            "dev-master": "2.0-dev"
+            "dev-master": "1.0-dev"
         }
     }
 }
