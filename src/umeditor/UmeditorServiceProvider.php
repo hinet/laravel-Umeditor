@@ -1,7 +1,7 @@
 <?php namespace Hinet\Umeditor;
 
-use Illuminate\Support\Facades\Config;
 use Illuminate\Support\ServiceProvider;
+use Illuminate\Support\Facades\Route;
 
 class UmeditorServiceProvider extends ServiceProvider {
 
@@ -34,12 +34,13 @@ class UmeditorServiceProvider extends ServiceProvider {
 	 */
 	public function register()
 	{
-		$router = $this->app['router'];
-		$router->post('/umeditor/imageUp', 'UmeditorImageController@upload');
-		$router->get('/umeditor.config.js', [
-			'as' => 'umeditor.config',
-			'uses' => 'UmeditorImageController@config'
-		]);
+		Route::group(['namespace'=>'Hinet\Umeditor\Controller'],function(){
+            Route::post('/umeditor/imageUp', 'UmeditorImageController@upload');
+            Route::get('/umeditor.config.js', [
+                'as' => 'umeditor.config',
+                'uses' => 'UmeditorImageController@config'
+            ]);
+        });
 	}
 
 	/**

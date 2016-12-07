@@ -1,7 +1,8 @@
 <?php
-namespace Hinet\Umeditor;
+namespace Hinet\Umeditor\Controller;
 use Illuminate\Routing\Controller;
 use Hinet\Umeditor\UmeditorUploader;
+use Response,Input;
 
 class UmeditorImageController extends Controller {
 
@@ -12,7 +13,7 @@ class UmeditorImageController extends Controller {
      */
     public function upload() {
         //上传配置
-        $config = Config::get('umeditor::upload');
+        $config = config('umeditor.upload');
 
         //背景保存在临时目录中
         $up = new UmeditorUploader( "upfile" , $config );
@@ -37,7 +38,7 @@ class UmeditorImageController extends Controller {
     public function config() {
         $config = '(function () {
             window.UMEDITOR_CONFIG =';
-        $config .= json_encode(Config::get('umeditor::editor'));
+        $config .= json_encode(config('umeditor.editor'));
         $config .= ';})();';
 
         return Response::make($config, 200, ['Content-Type' => 'text/javascript']);
