@@ -15,7 +15,7 @@
 
 命令行下直接 `composer require hinet/laravel-umeditor` ，版本的话无特殊需求则选择 `~1.0`，当前使用的Umeditor版本为1.2.2
 
-####Config
+####配置
 1.在 `app/config/app.php` 的 `providers` 数组中添加
 ```php
 'Hinet\Umeditor\UmeditorServiceProvider',
@@ -26,14 +26,11 @@
 ```
 **同时确保 `url` 的值为web的地址, 同时别忘了`composer dumpautoload`**
 
-2.命令行下执行如下命令
+2.发布包配置文件
 ```shell
-php artisan config:publish hinet/umeditor
+php artisan vendor:publish --provider="Hinet\Umeditor\UmeditorServiceProvider" --tag="umeditor"
 ```
-和
-```shell
-php artisan asset:publish hinet/umeditor
-```
+发布包配置文件到应用根目录下的config目录
 
 3.配置文件的修改:
 ```php
