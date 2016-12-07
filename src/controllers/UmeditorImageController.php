@@ -2,7 +2,8 @@
 namespace Hinet\Umeditor\Controller;
 use Illuminate\Routing\Controller;
 use Hinet\Umeditor\UmeditorUploader;
-use Response,Input;
+use Illuminate\Support\Facades\Input;
+use Response;
 
 class UmeditorImageController extends Controller {
 
