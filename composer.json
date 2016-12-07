@@ -17,12 +17,14 @@
     },
     "autoload": {
         "classmap": [
-            "src/controllers"
+            "src/controllers",
+            "src/umeditor"
         ],
         "psr-4": {
             "hinet\\Umeditor\\": "src/"
         }
     },
+    "minimum-stability": "dev",
     "extra": {
         "branch-alias": {
             "dev-master": "1.0-dev"
