@@ -1,5 +1,5 @@
 <?php
-namespace Hinet\Umeditor
+namespace Hinet\Umeditor;
 use Illuminate\Routing\Controller;
 use Hinet\Umeditor\UmeditorUploader;
 
