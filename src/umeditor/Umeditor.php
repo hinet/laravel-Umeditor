@@ -44,7 +44,7 @@ class Umeditor {
      *	编辑器的CSS资源
      */
     public static function css() {
-        echo '<link href="'. asset('packages/umeditor/themes/default/css/umeditor.css') .'" type="text/css" rel="stylesheet">';
+        echo '<link href="'. asset('assets/umeditor/themes/default/css/umeditor.css') .'" type="text/css" rel="stylesheet">';
     }
 
     /**
@@ -52,7 +52,7 @@ class Umeditor {
      */
     public static function js() {
         echo '<script type="text/javascript" charset="utf-8" src="'.route('umeditor.config').'"></script>';
-        echo '<script type="text/javascript" charset="utf-8" src="'.asset('packages/zhuzhichao/umeditor.min.js').'"></script>
-            <script type="text/javascript" src="'.asset('packages/umeditor/lang/zh-cn/zh-cn.js').'"></script>';
+        echo '<script type="text/javascript" charset="utf-8" src="'.asset('assets/umeditor/umeditor.min.js').'"></script>
+            <script type="text/javascript" src="'.asset('assets/umeditor/lang/zh-cn/zh-cn.js').'"></script>';
     }
 }

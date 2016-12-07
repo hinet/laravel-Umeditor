@@ -1,7 +1,6 @@
 <?php
-use Illuminate\Support\Facades\Config;
 
-$url = Config::get('app.url').'/packages/umeditor/';
+$url = config('APP_URL').'/assets/umeditor/';
 
 return [
 
@@ -21,8 +20,8 @@ return [
         'UMEDITOR_HOME_URL' => $url,
 
         // 图片上传编辑器配置
-        'imageUrl' => Config::get('app.url').'/umeditor/imageUp',
-        'imagePath' => Config::get('app.url').'/',
+        'imageUrl' => config('APP_URL').'/umeditor/imageUp',
+        'imagePath' => config('APP_URL').'/',
         'imageFieldName' => 'upfile',
 
         //工具栏上的所有的功能按钮和下拉框，可以在new编辑器的实例时选择自己需要的从新定义
