@@ -19,7 +19,12 @@ class UmeditorServiceProvider extends ServiceProvider {
 	 */
 	public function boot()
 	{
-		$this->package('umeditor');
+		$this->publishes([
+		    __DIR__.'/../config/config.php' => config_path('umeditor.php'),
+		], 'umeditor');
+		$this->publishes([
+		    __DIR__ . '/../../public' => public_path('assets/umeditor'),
+		], 'umeditor');
 	}
 
 	/**
